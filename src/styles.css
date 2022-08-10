@@ -1,0 +1,49 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+:root {
+  --site-font: 'Roboto', sans-serif;
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+#content {
+  background: url('./assets/food.jpg');
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 10vh 85vh 5vh;
+  color: white;
+  font-family: var(--site-font);
+}
+header {
+  border: 1px solid yellow;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.nav > ul {
+  list-style: none;
+  padding: 0;
+  margin-left: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+}
+a {
+  text-decoration: none;
+  font-size: 1.5rem;
+  color: white;
+}
+.main {
+  border: 1px solid orange;
+}
+footer {
+  border: 1px solid red;
+}
