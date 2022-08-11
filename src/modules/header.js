@@ -6,6 +6,9 @@ const Header = () => {
     a.innerHTML = s;
     a.setAttribute('href', '#');
     a.setAttribute('id', s);
+    if(s === 'Home') {
+      a.classList.add('underline');
+    }
     li.appendChild(a);
 
     return li;
