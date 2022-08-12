@@ -7,7 +7,9 @@
     <title>Document</title>
     <script src="bundle.js"></script>
     <style>
-      *, *::after, *::before {
+      *,
+      *::after,
+      *::before {
         box-sizing: border-box;
       }
       :root {
@@ -30,10 +32,10 @@
       }
       header {
         display: flex;
-        justify-content: flex-start;
+        justify-content: center;
         align-items: center;
       }
-      .nav > ul{
+      .nav > ul {
         list-style: none;
         padding: 0;
         margin-left: 5rem;
@@ -47,11 +49,100 @@
         font-size: 1.5rem;
         color: white;
       }
+      .underline {
+        text-decoration: underline;
+      }
       .main {
-        border: 1px solid orange;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .about {
+        background-color: rgba(0, 0, 0, 0.5);
+        width: 50%;
+        height: 70%;
+        border-radius: 1rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .chef {
+        background: url('./assets/anthony.jpeg');
+        background-size: contain;
+        margin-left: 2rem;
+        width: 30%;
+        height: 90%;
+      }
+      .welcome {
+        width: 60%;
+        height: 90%;
+        margin-right: 2rem;
+        font-size: 2.5rem;
+        line-height: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+      }
+      .menu {
+        background-color: rgba(0, 0, 0, 0.5);
+        width: 50%;
+        height: 70%;
+        border-radius: 1rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      } 
+      .contact {
+        background-color: rgba(0, 0, 0, 0.5);
+        width: 50%;
+        height: 70%;
+        border-radius: 1rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+      } 
+      .contact p {
+        padding-bottom: 2rem;
+        font-size: 3rem;
+        font-weight: lighter;
+      }
+      form {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 3rem;
+      }
+      form input {
+        width: 30%;
+        height: 2rem;
+        outline: none;
+        border: none;
+      }
+      form textarea {
+        width: 50%;
+        outline: none;
+        border: none;
+      }
+      form button {
+        width: 10%;
+        height: 2rem;
+        outline: none;
+        border: none;
+        border-radius: 10px;
+        background-color: whitesmoke;
+        cursor: pointer;
+      }
+      form button:hover {
+        background-color: white;
       }
       footer {
-        border: 1px solid red;
+        font-size: 1.25rem;
+        display:flex;
+        justify-content: center;
+        align-items: center;
       }
     </style>
   </head>
@@ -66,8 +157,21 @@
           </ul>
         </div>
       </header>
-      <div class="main">main</div>
-      <footer>footer</footer>
+      <div class="main">
+        <div class="contact">
+          <p>Contact Us!</p>
+          <form>
+            <input type="text" id="firstname" name="firstname" placeholder="Your First Name...">
+            <input type="text" id="lastname" name="lastname" placeholder="Your Last Name...">
+            <input type="email" id="email" name="email" placeholder="Your E-Mail...">
+            <textarea id="subject" name="subject" placeholder="Write us something..." style="height: 200px"></textarea>
+            <button type="submit">Submit</button>
+          </form>
+        </div>
+      </div> 
+      <footer>
+        <p>&copy; made by Ugur Sadiklar</p>
+      </footer>
     </div>
   </body>
 </html>
